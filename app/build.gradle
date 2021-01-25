@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "ro.alexmamo.firestorepagination"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutines_version"
+    implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation "androidx.recyclerview:recyclerview:$recycler_view_version"
+    implementation "androidx.cardview:cardview:$card_view_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$view_model_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$live_data_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$extensions_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutine_version"
+    implementation "com.google.firebase:firebase-firestore-ktx:$firestore_version"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_android_version"
+    kapt "androidx.hilt:hilt-compiler:$hilt_android_version"
+}
+apply plugin: 'com.google.gms.google-services'
