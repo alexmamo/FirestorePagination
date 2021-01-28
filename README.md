@@ -12,4 +12,4 @@ To make this app work, follow the instructions given in the official documentati
 
 This repo is the source code of the this article: [How to paginate Firestore using Paging 3 on Android?](https://medium.com/firebase-tips-tricks/how-to-paginate-firestore-using-paging-3-on-android-c485acb0a2df)
 
-See it on youtube: Coming soon.
+See it also on youtube: https://youtu.be/4JOzozH5eOQ
