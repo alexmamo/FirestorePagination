@@ -38,7 +38,6 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutines_version"
     implementation "androidx.core:core-ktx:$core_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
@@ -46,8 +45,6 @@ dependencies {
     implementation "androidx.cardview:cardview:$card_view_version"
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$view_model_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$live_data_version"
-    implementation "androidx.lifecycle:lifecycle-extensions:$extensions_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
