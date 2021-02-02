@@ -17,7 +17,6 @@ buildscript {
         extensions_version = "2.2.0"
         material_version = "1.2.1"
         paging_version = "3.0.0-alpha13"
-        coroutine_version = "1.3.9"
         firestore_version = "22.0.2"
     }
     repositories {
